@@ -13,10 +13,12 @@ export const createPlayer = (req: Request, res: Response): void => {
     res.status(201).json({ message: "Create new player.", data: newPlayer});
 };
 
-export const updatePlayer = (req: Request, res: Response) => {
-    res.status(200).sendjson("Update Player.");
+export const updatePlayer = (req: Request, res: Response): void => {
+    res.status(200).json({message:"Player Updated.", data:updatePlayer});
 };
 
-export const deletePlayer = (req: Request, res: Response) => {
-    res.status(200).send("Delete Player.");
+export const deletePlayer = (req: Request, res: Response): void => {
+    const {id} = req.params;
+    playerService.deletePlayer(id);
+    res.status(200).json({message:"Delete Player."});
 };
