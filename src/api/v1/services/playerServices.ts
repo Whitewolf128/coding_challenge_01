@@ -8,11 +8,6 @@ const COLLECTION = "player";
  * @throws {Error} - If validation or repository operation fails.
  */
 
-//export const getAllPlayers = async (): Promise<Player[]> => {
-    //try{
-        //const player: Player[] 
-    //}
-    //catch (error:unknown) {
+export const getAllPlayers =  (): string[] => {
         
-    //}
-//}
+}
