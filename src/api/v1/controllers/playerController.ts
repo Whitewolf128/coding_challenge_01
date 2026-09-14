@@ -18,7 +18,7 @@ export const updatePlayer = (req: Request, res: Response): void => {
 };
 
 export const deletePlayer = (req: Request, res: Response): void => {
-    const {id} = req.params;
+    const id = Number(req.params.id);
     playerService.deletePlayer(id);
     res.status(200).json({message:"Delete Player."});
 };
