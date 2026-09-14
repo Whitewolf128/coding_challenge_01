@@ -9,5 +9,17 @@ const COLLECTION = "player";
  */
 
 export const getAllPlayers =  (): string[] => {
-        
+    return ["Player 1", "Player 2", "Player 3"];
+}
+
+export const createPlayer =  (name: string): string => {
+    return "Player created.";
+}
+
+export const updatePlayer =  (id: number, name: string): string => {
+    return "Player updated.";
+}
+
+export const deletePlayer =  (id: number): string => {
+    return "Player deleted.";
 }

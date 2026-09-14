@@ -1,18 +1,22 @@
-import { Request, Response } from "express";    
+import { Request, Response } from "express";
+import * as playerService from "../services/playerServices";    
 
-export const getAllPlayers = (req: Request, res: Response) => {
-    res.status(200).send("Get all Players.");
+export const getAllPlayers = (req: Request, res: Response): void => {
+    const players:  string[] = playerService.getAllPlayers();
+    res.status(200).json({ message: "Get all Players.", data: players });
 };
 
 
-export const createPlayer = (req: Request, res: Response) => {
-    res.status(201).send("Create new player.");
+export const createPlayer = (req: Request, res: Response): void => {
+    const newPlayer: string = req.body;
+    playerService.createPlayer(newPlayer);
+    res.status(201).json({ message: "Create new player.", data: newPlayer});
 };
 
 export const updatePlayer = (req: Request, res: Response) => {
-    res.status(200).send("Update Player.");
+    res.status(200).sendjson("Update Player.");
 };
 
-export const DeletePlayer = (req: Request, res: Response) => {
+export const deletePlayer = (req: Request, res: Response) => {
     res.status(200).send("Delete Player.");
 };
