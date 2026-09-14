@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/dsabourin55/Backend-Module-1-Demo-Fall-2026a#readme",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.20.2",
     "@types/supertest": "^7.2.1",
@@ -32,7 +33,9 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@types/express": "^5.0.6",
     "express": "^5.2.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }
